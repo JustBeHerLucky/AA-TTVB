@@ -11,7 +11,7 @@ class Preprocessor:
         self.sent_tokenizer = sent_tokenize
         self.normalizer = simple_preprocess
         abc = os.path.abspath(os.getcwd()) + "data\\vietnamese_stopsword"
-        with open('data\\vietnamese_stopsword', 'r', encoding='utf-8') as reader:
+        with open(abc, 'r', encoding='utf-8') as reader:
             self.stop_words = reader.read().split("\n")
 
     def preprocessing(self, paragraph):
