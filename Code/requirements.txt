@@ -5,3 +5,8 @@ pyvi
 networkx
 numpy
 textract
+docx
+pdfplumber
+requests
+bs4
+readURL
