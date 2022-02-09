@@ -10,7 +10,7 @@ class Preprocessor:
         self.word_tokenizer = word_tokenize
         self.sent_tokenizer = sent_tokenize
         self.normalizer = simple_preprocess
-        abc = os.path.abspath(os.getcwd()) + "data\\vietnamese_stopsword"
+        abc = os.path.abspath(os.getcwd()) + "/data/vietnamese_stopsword"
         with open(abc, 'r', encoding='utf-8') as reader:
             self.stop_words = reader.read().split("\n")
 
