@@ -8,4 +8,4 @@ docx
 pdfplumber
 requests
 bs4
-exceptions
+python-docx
