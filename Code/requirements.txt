@@ -3,7 +3,6 @@ nltk
 gensim
 pyvi
 networkx
-numpy
 textract
 docx
 pdfplumber
