@@ -3,15 +3,15 @@ import numpy as np
 from nltk import sent_tokenize
 from gensim.utils import simple_preprocess
 from pyvi.ViTokenizer import tokenize as word_tokenize
-import os
+
 
 class Preprocessor:
     def __init__(self):
         self.word_tokenizer = word_tokenize
         self.sent_tokenizer = sent_tokenize
         self.normalizer = simple_preprocess
-        abc = os.path.abspath(os.getcwd()) + "/data/vietnamese_stopsword"
-        with open(abc, 'r', encoding='utf-8') as reader:
+        
+        with open('vietnamese_stopsword', 'r', encoding='utf-8') as reader:
             self.stop_words = reader.read().split("\n")
 
     def preprocessing(self, paragraph):
