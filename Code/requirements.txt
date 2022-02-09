@@ -2,3 +2,5 @@ streamlit
 nltk
 gensim
 pyvi
+networkx
+numpy
