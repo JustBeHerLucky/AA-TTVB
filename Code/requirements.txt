@@ -5,7 +5,7 @@ pyvi
 networkx
 textract
 docx
-pdfplumber
 requests
 bs4
 python-docx
+pdfminer.six

@@ -2,9 +2,8 @@ import streamlit as st
 from summary import Summarizer
 from evaluate import Evaluate
 from nltk.tokenize import sent_tokenize
-import textract
+from pdfminer.high_level import extract_text
 import docx
-import pdfplumber
 import requests
 from bs4 import BeautifulSoup
 from readURL import FrequencySummarizer
@@ -31,13 +30,8 @@ def readDocFile(filenam):
 
 
 def readPdfFile(filenam):
-    all_text = ''
-    with pdfplumber.open(filenam) as pdf:
-        for pdf_page in pdf.pages:
-            single_page_text = pdf_page.extract_text()
-            # separate each page's text with newline
-            all_text = all_text + '\n' + single_page_text
-        return all_text
+    all_text = extract_text(filenam)
+    return all_text
 
 
 def getTextFromURL(url):
